@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+
+/*google fonts */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  color: white;
+}
+
+body {
+  font-family: "Open sans", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+
+  color: #212121;
+  position: relative;
+}
+
+h1,
+h2 {
+  font-family: sans-serif;
+  line-height: 1.1;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* end base style */
+
+.container {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/*end public styling */
+
+header {
+  width: 100%;
+  height: auto;
+  padding: 30px 0 20px;
+  background-color: transparent;
+  position: absolute;
+
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 5;
+}
+
+header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo img {
+  width: 100px;
+}
+
+header nav a {
+  font-size: 0.95em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  margin: 0 12px;
+  padding: 0 8px 5px;
+  position: relative;
+}
+
+header nav a.active {
+  color: red;
+}
+
+header nav a::before {
+  content: "";
+  border-bottom: 2px solid #fff;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s right;
+}
+
+header nav a:hover::before {
+  right: 0%;
+}
+
+header .action button {
+  display: inline-block;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+header .action button i {
+  font-size: 1.1em;
+  color: #fff;
+}
+
+/*end header */
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  color: #212121;
+  background: linear-gradient(95deg, #111111, #212121);
+
+  position: relative;
+}
+
+.hero .container {
+  min-height: 100%;
+  position: relative;
+  padding: 25vh 0 100px;
+}
+
+.hero .mid {
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  height: 400px;
+  position: relative;
+}
+
+.hero .mid h2 {
+  font-size: 20em;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-text-stroke: 3px #ea1300;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+}
+
+.hero .mid img {
+  filter: drop-shadow(0 15px 15px #00000000);
+  width: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  position: absolute;
+  z-index: 2;
+}
+
+/* end mid */
+
+.hero .bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero .bottom a {
+  font-size: 25px;
+  margin: 0 20px;
+  color: white;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hero .bottom a:hover {
+  color: #ea1300;
+}
+
+.hero .left-side {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.hero .left-side a {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin: 100px 0;
+  padding: 5px 15px 0;
+  transform: rotate(-90deg);
+}
+
+.hero .left-side a::before {
+  content: "";
+  border-bottom: 2px solid rgb(251, 3, 3);
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(50%);
+  transition: 0.3s right;
+}
+
+.hero .left-side a:hover::before {
+  right: 0%;
+}
+
+/* end left-side */
+
+.hero .right-side {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+}
+
+.hero .right-side a {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: white;
+  margin: 50px 0px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 10px 30px 10px 10px;
+}
+
+.hero .right-side a:hover {
+  color: #fff;
+}
+
+.hero .right-side a.active {
+  background: red;
+  color: #fff;
+  font-weight: bold;
+}
